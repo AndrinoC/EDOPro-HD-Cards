@@ -1,36 +1,27 @@
-from os.path import exists as __exists, join as __join
-
+from os.path import exists as file_exists, join as path_join
+from typing import List, Optional
 from commands.typing import CommandReturn, DownloadCard
 
 deck_folder_path = "./deck/"
 
-
-def __filter_card_id(cards: list[str]) -> list[int]:
-    """Filters an list with card ids to remove
-    repeating ones and non-ids"""
-
-    ids: list[int] = list()
-    for c in cards:
+def filter_card_id(cards: List[str]) -> List[int]:
+    """Filters a list of card IDs to remove repeating ones and non-IDs."""
+    ids = set()
+    for card in cards:
         try:
-            c = int(c)
-            if c not in ids:
-                ids.append(int(c))
+            card_id = int(card)
+            ids.add(card_id)
         except ValueError:
-             continue
-    return ids
+            continue
+    return list(ids)
 
-
-def get_deck(deck_name: str) -> CommandReturn:
-    """Reads a deck file and returns the
-    ids of the cards in it"""
-
-    deck_path = __join(deck_folder_path, f"{deck_name}.ydk")
-    deck_exists = __exists(deck_path)
-    if not deck_exists:
+def get_deck(deck_name: str) -> Optional[CommandReturn]:
+    """Reads a deck file and returns the IDs of the cards in it."""
+    deck_path = path_join(deck_folder_path, f"{deck_name}.ydk")
+    if not file_exists(deck_path):
         return None
-    deck = open(deck_path, mode="r", encoding="utf8")
-    cards = __filter_card_id([l.strip() for l in deck.readlines()])
-    return [
-        DownloadCard(c, False)
-        for c in cards
-    ]
+
+    with open(deck_path, mode="r", encoding="utf8") as deck:
+        cards = filter_card_id([line.strip() for line in deck.readlines()])
+
+    return [DownloadCard(card_id, False) for card_id in cards]
