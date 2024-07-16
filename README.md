@@ -1,4 +1,4 @@
-# EDOPro HD Downloader
+# EDOPro HD Downloader Fast
 
 # Installation
 
@@ -16,6 +16,7 @@ Since I can't test non-windows compilations you will need to download the source
 If you run the program and read the instructions you should be fine.
 
 But for short:
+- Select the amount of workers to be used based on your CPU cores. 
 
 - Insert the name of your deck (without the `.ydk` extension) when asked to download all the images of the cards in it.
 
@@ -28,3 +29,4 @@ But for short:
 # License
 
 [MIT](https://douglas-sebastian.mit-license.org)
+https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/blob/main/LICENSE
