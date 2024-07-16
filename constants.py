@@ -1,13 +1,14 @@
-DOWNLOADER_VERSION = "2.3"
+DOWNLOADER_VERSION = "1.0 Forked"
 """Program version"""
 
 REQUEST_HEADERS    = {
-	"User-Agent": f"NiiMiyo-EDOPro-HD-Downloader/{DOWNLOADER_VERSION}"
+	"User-Agent": f"AndrinoC-EDOPro-Hd-Downloader-FAST/{DOWNLOADER_VERSION}"
 }
 """Header to be used in an HTTP request"""
 
 INTRO_STRING = f"""EDOPro HD Downloader v{DOWNLOADER_VERSION}
 Created by Nii Miyo
+Fork by Andrino
 Type "/help" for help"""
 """String to be used when starting the program"""
 
