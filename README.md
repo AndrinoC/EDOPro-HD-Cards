@@ -31,6 +31,7 @@ But for short:
 
 - If no images are downloaded at all or the quality still bad please delete "hd_cards_downloader_tracker" and "hd_fields_downloader_tracker" and try again.
 - Requirements.txt might not include all requirements, please check the terminal output and install accordingly or use the compiled version.
+- Last few % is a bit slower than the rest due to finishing partial images.
 
 Any new issue or feedback can be shared at the [Issues Tab](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/issues)
 
