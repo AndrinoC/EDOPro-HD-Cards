@@ -1,10 +1,10 @@
-# EDOPro HD Downloader Fast
+# EDOPro HD Downloader Fast ⚡
 
 # Installation
 
 ## Windows
 
-Download the [latest Windows release](https://github.com/NiiMiyo/EDOPro-Hd-Downloader/releases/latest) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`).
+Download the [Latest Release](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/releases) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`).
 
 ## Non-Windows
 
