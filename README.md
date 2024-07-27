@@ -4,7 +4,11 @@
 
 ## Windows 
 
+*Regular version (command)*
 Download the [Latest Release](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/releases) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`).
+
+*Interface version*
+Download the [Interface Beta](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/releases/tag/UI-Beta). Same installation as command version. (still working on this version)
 
 ## Non-Windows 
 
