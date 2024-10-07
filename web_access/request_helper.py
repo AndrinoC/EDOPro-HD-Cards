@@ -17,11 +17,11 @@ def make_request(url: str, params: Optional[dict[str, Any]] = None, timeout: int
     """
     try:
         response = requests.get(url, headers=REQUEST_HEADERS, params=params, timeout=timeout)
-        response.raise_for_status()  # Raise exception for HTTP errors (4xx or 5xx)
+        response.raise_for_status()
         return response
     except requests.exceptions.RequestException as e:
         print(f"Error making request to {url}: {type(e).__name__} - {e}")
-        raise  # Re-raise the exception for higher-level handling
+        raise
     except Exception as e:
         print(f"Unexpected error making request to {url}: {type(e).__name__} - {e}")
-        raise  # Re-raise the exception for higher-level handling
+        raise

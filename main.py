@@ -4,12 +4,10 @@ from time import sleep
 from traceback import print_exc
 from commands.setup import setup_commands, setup_files, setup_folders
 from constants import DOWNLOADER_VERSION, INPUT_STRING, INTRO_STRING, SLEEP_TIME_BETWEEN_DOWNLOADS
-
 from input_handler import handle_input
 from commands.typing import DownloadCard
 from web_access.downloader import download_image
 from tracker import already_downloaded, mark_as_downloaded, load_cached_ids
-
 from threading import Lock, Event
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pprint import pprint
@@ -21,7 +19,7 @@ def initialize():
     setup_files()
     setup_folders()
     setup_commands()
-    load_cached_ids()  # Load cached IDs here
+    load_cached_ids()
     print(INTRO_STRING)
 
 def to_download(card: DownloadCard):
@@ -46,7 +44,7 @@ def remove_downloaded(cards):
 
 def get_num_workers():
     """Prompt user for number of worker threads based on CPU cores."""
-    num_cores = os.cpu_count() or 1  # Fallback to 1 if os.cpu_count() returns None
+    num_cores = os.cpu_count() or 1
     print(f"Detected {num_cores} CPU cores.")
     try:
         num_workers = int(input(f"Enter number of worker threads (1-{num_cores}): "))
@@ -76,11 +74,9 @@ def main():
 
             progress = {'count': total_cards - len(cards)}
 
-            # Create a thread pool executor with specified number of workers
             with ThreadPoolExecutor(max_workers=num_workers) as executor:
                 futures = [executor.submit(down_loop, card, total_cards, progress, lock, stopper) for card in cards]
 
-                # Check for KeyboardInterrupt while waiting for futures to complete
                 try:
                     for future in as_completed(futures):
                         if stopper.is_set():
@@ -88,7 +84,6 @@ def main():
                 except KeyboardInterrupt:
                     print("\n\nForcing program interruption...")
                     stopper.set()
-                    # Cancel all running futures
                     for future in futures:
                         future.cancel()
                     break
@@ -99,7 +94,7 @@ def main():
         print_exc()
 
     finally:
-        stopper.set()  # Ensure stopper is set to exit any running threads
+        stopper.set()
 
 if __name__ == "__main__":
     main()

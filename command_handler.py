@@ -19,7 +19,7 @@ class CommandHandler:
         `force` command for `"/force /allcards"` input.
         """
 
-        if not user_input:  # If empty string or None
+        if not user_input:
             return None
 
         command_used = get_first_word(user_input)

@@ -12,7 +12,7 @@ def _fetch_card_ids(url: str, params: dict = None) -> List[int]:
     """Fetches card IDs from the specified URL with optional parameters."""
     try:
         response = make_request(url, params=params)
-        response.raise_for_status()  # Raise an exception for bad responses
+        response.raise_for_status()
         return _get_ids_from_response(response)
     except Exception as e:
         print(f"Error fetching {url}: {type(e).__name__}\n{e}")

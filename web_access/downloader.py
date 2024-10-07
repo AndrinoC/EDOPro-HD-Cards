@@ -7,15 +7,13 @@ from commands.typing import DownloadCard
 from constants import IMAGES_BASE_URL
 from id_conversor import convert_id
 
-# Session with retry mechanism for better stability
 session = requests.Session()
 
-# Retry mechanism with exponential backoff
 retry_strategy = Retry(
     total=3,
     status_forcelist=[500, 502, 503, 504],
     allowed_methods=frozenset(["GET", "HEAD", "OPTIONS"]),
-    backoff_factor=1  # Exponential backoff factor
+    backoff_factor=1
 )
 adapter = HTTPAdapter(max_retries=retry_strategy)
 session.mount("https://", adapter)

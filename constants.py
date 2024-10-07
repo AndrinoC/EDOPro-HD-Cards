@@ -37,6 +37,5 @@ SLEEP_TIME_BETWEEN_DOWNLOADS = 1 / 18
 """Time in seconds that the program will wait before downloading the next card"""
 
 ID_CONVERSION: dict[int, int] = {
-	# Mecha Phantom Beast Token
 	904186: 31533705
 }

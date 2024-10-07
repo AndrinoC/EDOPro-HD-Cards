@@ -6,7 +6,7 @@ def __cmd_all(_: str) -> CommandReturn:
     allcards = CommandHandler.commands.get("allcards")
     allfields = CommandHandler.commands.get("allfields")
 
-    return allcards.action(_) + allfields.action(_)  # type: ignore
+    return allcards.action(_) + allfields.action(_)
 
 
 COMMAND_ALL = DownloaderCommand(
