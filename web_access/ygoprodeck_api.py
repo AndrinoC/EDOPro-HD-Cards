@@ -28,9 +28,3 @@ def get_all_fields() -> List[int]:
     `db.ygoprodeck.com` database.
     """
     return _fetch_card_ids(YGOPRODECK_CARDS_URL, params={"type": "spell card", "race": "field"})
-
-def get_all_tokens() -> List[int]:
-    """
-    Returns the ids of all Tokens in the `db.ygoprodeck.com` database.
-    """
-    return _fetch_card_ids(YGOPRODECK_CARDS_URL, params={"type": "token"})

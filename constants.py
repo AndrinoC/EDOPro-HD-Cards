@@ -1,4 +1,4 @@
-DOWNLOADER_VERSION = "1.0 Forked"
+DOWNLOADER_VERSION = "1.2.0-Forked"
 """Program version"""
 
 REQUEST_HEADERS    = {
@@ -7,13 +7,9 @@ REQUEST_HEADERS    = {
 """Header to be used in an HTTP request"""
 
 INTRO_STRING = f"""EDOPro HD Downloader v{DOWNLOADER_VERSION}
-Created by Nii Miyo
 Fork by Andrino
-Type "/help" for help"""
+Automatically downloading all missing cards and fields..."""
 """String to be used when starting the program"""
-
-INPUT_STRING = "Insert deck name (without .ydk) or command: "
-"""String that appears at user input"""
 
 YGOPRODECK_CARDS_URL = "https://db.ygoprodeck.com/api/v7/cardinfo.php"
 """Base API URL for YGOProDeck"""
@@ -32,9 +28,6 @@ SETUP_CREATION_FILES = (CARD_CACHE_PATH, FIELD_CACHE_PATH)
 
 SETUP_CREATION_FOLDERS = ("pics/field",)
 """Folders needed on setup"""
-
-SLEEP_TIME_BETWEEN_DOWNLOADS = 1 / 18
-"""Time in seconds that the program will wait before downloading the next card"""
 
 ID_CONVERSION: dict[int, int] = {
 	904186: 31533705
