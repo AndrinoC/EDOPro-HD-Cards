@@ -11,16 +11,11 @@ Download the [Latest Release](https://github.com/AndrinoC/EDOPro-HD-Cards/releas
 
 OR
 
-Download the source code and run build.bat.
-Move EDOProHDDownloader to the EDOPro game folder and run the script.
-
-OR
-
-Download the PICS folder from [Latest Release](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/releases) and unzip them at your EDOPro game folder replacing the lower quality ones.
+Download the PICS folder from [Latest Release](https://github.com/AndrinoC/EDOPro-HD-Cards/releases) and unzip them at your EDOPro game folder replacing the lower quality ones.
 
 # Issues
 
-Any new issue or feedback can be shared at the [Issues Tab](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/issues)
+Any new issue or feedback can be shared at the [Issues Tab](https://github.com/AndrinoC/EDOPro-HD-Cards/issues)
 
 # License
 
