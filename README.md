@@ -1,10 +1,13 @@
-# EDOPro HD Downloader Fast ⚡
+# EDOPro HD Cards
+
+This for of EDOPro HD Downloader is way faster, it takes around 20 seconds to download all images for the game.
+Not only I provide the source code and [compiled script](https://github.com/AndrinoC/EDOPro-HD-Cards/releases/download/1.2.0/EDOProHDDownloader.exe) but also [HD images in 7z format](https://github.com/AndrinoC/EDOPro-HD-Cards/releases/download/1.2.0/pics.7z). 
 
 # Installation & Usage
 
 ## Windows 
 
-Download the [Latest Release](https://github.com/AndrinoC/EDOPro-Hd-Downloader-FAST/releases) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`) and run the .exe file.
+Download the [Latest Release](https://github.com/AndrinoC/EDOPro-HD-Cards/releases) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`) and run the .exe file.
 
 OR
 
