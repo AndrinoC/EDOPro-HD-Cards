@@ -5,8 +5,6 @@ Not only I provide the source code and [compiled script](https://github.com/Andr
 
 # Installation & Usage
 
-## Windows 
-
 Download the [Latest Release](https://github.com/AndrinoC/EDOPro-HD-Cards/releases) and unzip it at your EDOPro folder (Default should be something like `C:/ProjectIgnis/`) and run the .exe file.
 
 OR
