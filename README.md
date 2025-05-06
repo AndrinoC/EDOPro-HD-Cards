@@ -1,6 +1,6 @@
 # EDOPro HD Cards
 
-This for of EDOPro HD Downloader is way faster, it takes around 20 seconds to download all card images.
+This fork of EDOPro HD Downloader is way faster, it takes around 20 seconds to download all card images.
 Not only I provide the source code and [compiled script](https://github.com/AndrinoC/EDOPro-HD-Cards/releases/download/1.2.0/EDOProHDDownloader.exe) but also [HD images in 7z format](https://github.com/AndrinoC/EDOPro-HD-Cards/releases/download/1.2.0/pics.7z). 
 
 # Installation & Usage
